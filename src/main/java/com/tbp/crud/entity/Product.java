@@ -12,10 +12,10 @@ import lombok.NoArgsConstructor;
 @AllArgsConstructor
 @NoArgsConstructor
 @Entity
-public class User {
+public class Product {
 @Id	
 @GeneratedValue
 private int id;
 private String name;
-private String address;
+private String cost;
 }
