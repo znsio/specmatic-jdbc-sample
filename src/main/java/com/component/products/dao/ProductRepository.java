@@ -1,8 +1,7 @@
-package com.tbp.crud.dao;
+package com.component.products.dao;
 
+import com.component.products.entity.Product;
 import org.springframework.data.jpa.repository.JpaRepository;
-
-import com.tbp.crud.entity.Product;
 
 public interface ProductRepository extends JpaRepository<Product, Integer> {
 

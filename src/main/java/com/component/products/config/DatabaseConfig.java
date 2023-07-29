@@ -1,4 +1,4 @@
-package com.tbp.crud.config;
+package com.component.products.config;
 
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.context.annotation.Bean;

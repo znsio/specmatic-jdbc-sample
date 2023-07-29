@@ -1,12 +1,9 @@
-package com.tbp.crud.config;
+package com.component.products.config;
 
 import in.specmatic.database.mock.ExternalStub;
 import in.specmatic.database.mock.JdbcMockFactory;
-import org.springframework.beans.factory.annotation.Value;
-import org.springframework.boot.context.properties.ConfigurationProperties;
 import org.springframework.boot.test.context.TestConfiguration;
 import org.springframework.context.annotation.*;
-import org.springframework.jdbc.datasource.DriverManagerDataSource;
 
 import javax.sql.DataSource;
 

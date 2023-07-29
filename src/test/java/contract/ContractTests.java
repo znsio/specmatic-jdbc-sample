@@ -1,7 +1,7 @@
-package contracts;
+package contract;
 
-import com.tbp.crud.SpringBootCrudJpaH2Application;
-import com.tbp.crud.config.TestDatabaseConfig;
+import com.component.products.ProductsService;
+import com.component.products.config.TestDatabaseConfig;
 import in.specmatic.stub.ContractStub;
 import in.specmatic.test.SpecmaticJUnitSupport;
 import org.junit.jupiter.api.AfterAll;
@@ -14,7 +14,7 @@ import java.io.IOException;
 
 import static in.specmatic.stub.API.createStub;
 
-@SpringBootTest(classes = SpringBootCrudJpaH2Application.class, webEnvironment = SpringBootTest.WebEnvironment.DEFINED_PORT)
+@SpringBootTest(classes = ProductsService.class, webEnvironment = SpringBootTest.WebEnvironment.DEFINED_PORT)
 @ContextConfiguration(classes = {TestDatabaseConfig.class})
 public class ContractTests extends SpecmaticJUnitSupport {
 

@@ -1,9 +1,9 @@
-package com.tbp.crud.service;
+package com.component.products.service;
 
 import java.util.Optional;
 
-import com.tbp.crud.dao.ProductRepository;
-import com.tbp.crud.entity.Product;
+import com.component.products.dao.ProductRepository;
+import com.component.products.entity.Product;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 

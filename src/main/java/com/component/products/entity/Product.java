@@ -1,4 +1,4 @@
-package com.tbp.crud.entity;
+package com.component.products.entity;
 
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;

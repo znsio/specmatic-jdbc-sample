@@ -1,4 +1,4 @@
-package com.tbp.crud.controller;
+package com.component.products.controller;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -6,8 +6,8 @@ import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.tbp.crud.entity.Product;
-import com.tbp.crud.service.ProductService;
+import com.component.products.entity.Product;
+import com.component.products.service.ProductService;
 
 @RestController
 public class ProductController {
@@ -21,7 +21,7 @@ public class ProductController {
 
 
 	
-	@PutMapping("/updateproduct")
+	@PutMapping("/updateProduct")
 	public Product updateProduct(@RequestBody Product user) {
 		return productService.updateProduct(user);
 	}
