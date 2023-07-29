@@ -17,5 +17,5 @@ public class Product {
 @GeneratedValue
 private int id;
 private String name;
-private String cost;
+private int cost;
 }

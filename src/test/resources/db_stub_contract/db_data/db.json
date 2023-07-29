@@ -10,7 +10,7 @@
       "rows": [
         {
           "id1_0_0_": 1,
-          "cost2_0_0_": "100 $",
+          "cost2_0_0_": 100,
           "name3_0_0_": "Artificial Lamp"
 
 

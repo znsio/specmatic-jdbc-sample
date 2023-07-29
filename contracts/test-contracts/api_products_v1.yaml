@@ -16,7 +16,7 @@ paths:
               200_UPDATE:
                 value:
                   {
-                    "cost": "100 $",
+                    "cost": 100,
                     "name": "Artificial Lamp",
                     "id": 1
                   }
@@ -43,7 +43,7 @@ paths:
               200_ADD:
                 value:
                   {
-                    "cost": "300 $",
+                    "cost": 300,
                     "name": "Wooden Sofa",
                     "id": 1
                   }
@@ -71,6 +71,6 @@ components:
           type: string
           nullable: true
         cost:
-          type: string
+          type: integer
           nullable: true
 
