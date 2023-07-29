@@ -6,7 +6,7 @@
     {
       "provider": "git",
       "test": [
-        "contracts/test-contracts/api_products_v1.yaml"
+        "contracts/api_products_v1.yaml"
       ]
     },
     {
