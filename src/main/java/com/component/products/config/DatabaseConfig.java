@@ -6,6 +6,10 @@ import org.springframework.context.annotation.Configuration;
 import org.springframework.jdbc.datasource.DriverManagerDataSource;
 
 import javax.sql.DataSource;
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.SQLException;
+import java.sql.Statement;
 
 @Configuration
 public class DatabaseConfig {
@@ -22,12 +26,16 @@ public class DatabaseConfig {
     private String driverClassName;
 
     @Bean
-    public DataSource dataSource() {
+    public DataSource dataSource() throws SQLException {
         DriverManagerDataSource dataSource = new DriverManagerDataSource();
         dataSource.setDriverClassName(driverClassName);
         dataSource.setUrl(url);
         dataSource.setUsername(username);
-        dataSource.setPassword(password);
+
+        Connection connection = dataSource.getConnection();
+        Statement statement = connection.createStatement();
+        statement.execute("CREATE TABLE PRODUCT (id INTEGER, name VARCHAR(255), cost INTEGER)");
+
         return dataSource;
     }
 }
