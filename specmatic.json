@@ -8,14 +8,6 @@
       "test": [
         "contracts/api_products_v1.yaml"
       ]
-    },
-    {
-      "provider": "git",
-      "stub": [
-        "src/test/resources/db_stub_contract/db.yaml"
-      ]
     }
   ]
 }
-
-
