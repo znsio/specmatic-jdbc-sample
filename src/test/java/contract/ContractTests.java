@@ -25,8 +25,8 @@ public class ContractTests extends SpecmaticJUnitSupport {
     @BeforeAll
     public static void setUp() {
         System.setProperty("host", "localhost");
-        System.setProperty("port", "9090");
-        System.setProperty("endpointsAPI", "http://localhost:9090/actuator/mappings");
+        System.setProperty("port", "8080");
+        System.setProperty("endpointsAPI", "http://localhost:8080/actuator/mappings");
         System.setProperty("spring.profiles.active", "contract-tests");
         stub =  createStub("localhost", 9000);
     }
