@@ -31,7 +31,7 @@ public class TestDatabaseConfig extends DatabaseConfig {
     @Bean(destroyMethod = "close")
     public JdbcMockFactory primaryJdbcMockFactory() {
         if (jdbcMockFactoryCatalogue == null) {
-            jdbcMockFactoryCatalogue = new JdbcMockFactory(new DatabaseStub("localhost", 9010), new File("./src/test/resources/db_stub_contract/db_data").getAbsolutePath());
+            jdbcMockFactoryCatalogue = new JdbcMockFactory(new DatabaseStub("localhost", 9010), new File("./src/test/resources/db_stub_data").getAbsolutePath());
         }
         if (mockDataSourceCatalogue == null) mockDataSourceCatalogue = jdbcMockFactoryCatalogue.createDataSource();
         return jdbcMockFactoryCatalogue;
