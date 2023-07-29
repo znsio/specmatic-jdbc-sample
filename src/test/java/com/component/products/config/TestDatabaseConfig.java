@@ -1,11 +1,15 @@
 package com.component.products.config;
 
-import in.specmatic.database.mock.ExternalStub;
+import in.specmatic.database.mock.DatabaseStub;
 import in.specmatic.database.mock.JdbcMockFactory;
 import org.springframework.boot.test.context.TestConfiguration;
-import org.springframework.context.annotation.*;
+import org.springframework.context.annotation.Bean;
+import org.springframework.context.annotation.DependsOn;
+import org.springframework.context.annotation.Primary;
+import org.springframework.context.annotation.Profile;
 
 import javax.sql.DataSource;
+import java.io.File;
 
 @TestConfiguration
 @Primary
@@ -26,8 +30,9 @@ public class TestDatabaseConfig extends DatabaseConfig {
 
     @Bean(destroyMethod = "close")
     public JdbcMockFactory primaryJdbcMockFactory() {
-        if (jdbcMockFactoryCatalogue == null)
-            jdbcMockFactoryCatalogue = new JdbcMockFactory(new ExternalStub("localhost", 9000));
+        if (jdbcMockFactoryCatalogue == null) {
+            jdbcMockFactoryCatalogue = new JdbcMockFactory(new DatabaseStub("localhost", 9010), new File("./src/test/resources/db_stub_contract/db_data").getAbsolutePath());
+        }
         if (mockDataSourceCatalogue == null) mockDataSourceCatalogue = jdbcMockFactoryCatalogue.createDataSource();
         return jdbcMockFactoryCatalogue;
     }

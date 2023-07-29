@@ -1,4 +1,4 @@
-package contract;
+package com.component.products;
 
 import com.component.products.ProductsService;
 import com.component.products.config.TestDatabaseConfig;
