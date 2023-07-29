@@ -12,7 +12,7 @@
     {
       "provider": "git",
       "stub": [
-        "src/test/resources/db_stub_contracts/db.yaml"
+        "src/test/resources/db_stub_contract/db.yaml"
       ]
     }
   ]

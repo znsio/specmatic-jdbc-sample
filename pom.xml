@@ -67,7 +67,7 @@
 			<artifactId>database-mock</artifactId>
 			<groupId>in.specmatic</groupId>
 			<scope>test</scope>
-			<version>0.61.6-db</version>
+			<version>0.61.9-db</version>
 			<exclusions>
 				<exclusion>
 					<groupId>in.specmatic</groupId>
