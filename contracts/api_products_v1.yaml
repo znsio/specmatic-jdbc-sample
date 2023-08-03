@@ -4,9 +4,18 @@ info:
   title: Products API
   version: v1
 paths:
-  "/updateProduct":
+  "/products/{id}":
+    parameters:
+      - name: id
+        in: path
+        required: true
+        schema:
+          type: number
+        examples:
+          200_UPDATE:
+            value: 1
     put:
-      operationId: updateUser
+      operationId: updateProduct
       requestBody:
         content:
           application/json:
@@ -31,9 +40,9 @@ paths:
               examples:
                 200_UPDATE:
                   value:
-  "/addProduct":
+  "/products":
     post:
-      operationId: addUser
+      operationId: createProduct
       requestBody:
         content:
           application/json:

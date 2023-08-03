@@ -12,13 +12,13 @@ public class ProductService {
 	@Autowired
 	private ProductRepository productRepository;
 
-	public Product createProduct(Product user) {
+	public Product create(Product user) {
 		return productRepository.save(user);
 	}
 	
-	public Product updateProduct(Product product) {
+	public Product update(int id, Product product) {
 		Product oldProduct=null;
-		Optional<Product> optionaluser= productRepository.findById(product.getId());
+		Optional<Product> optionaluser= productRepository.findById(id);
 		if(optionaluser.isPresent()) {
 			oldProduct=optionaluser.get();
 			oldProduct.setName(product.getName());
