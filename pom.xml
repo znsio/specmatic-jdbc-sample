@@ -64,10 +64,10 @@
 			<scope>test</scope>
 		</dependency>
 		<dependency>
-			<artifactId>database-mock</artifactId>
+			<artifactId>specmatic-jdbc</artifactId>
 			<groupId>in.specmatic</groupId>
 			<scope>test</scope>
-			<version>0.61.9-db</version>
+			<version>0.62.0-db</version>
 			<exclusions>
 				<exclusion>
 					<groupId>in.specmatic</groupId>

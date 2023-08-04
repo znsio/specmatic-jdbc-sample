@@ -1,7 +1,7 @@
 package com.component.products.config;
 
-import in.specmatic.database.mock.DatabaseStub;
-import in.specmatic.database.mock.JdbcMockFactory;
+import in.specmatic.jdbc.stub.DatabaseStub;
+import in.specmatic.jdbc.stub.JdbcStubFactory;
 import org.springframework.boot.test.context.TestConfiguration;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.DependsOn;
@@ -18,23 +18,23 @@ public class TestDatabaseConfig extends DatabaseConfig {
 
     @Primary
     @Bean
-    @DependsOn("primaryJdbcMockFactory")
+    @DependsOn("primaryJdbcStubFactory")
     public DataSource dataSource() {
-       return mockDataSourceCatalogue;
+       return stubDataSource;
     }
-    JdbcMockFactory jdbcMockFactoryCatalogue = null;
-    DataSource mockDataSourceCatalogue = null;
+    JdbcStubFactory jdbcStubFactory = null;
+    DataSource stubDataSource = null;
 
 
 
 
     @Bean(destroyMethod = "close")
-    public JdbcMockFactory primaryJdbcMockFactory() {
-        if (jdbcMockFactoryCatalogue == null) {
-            jdbcMockFactoryCatalogue = new JdbcMockFactory(new DatabaseStub("localhost", 9010), new File("./src/test/resources/db_stub_data").getAbsolutePath());
+    public JdbcStubFactory primaryJdbcStubFactory() {
+        if (jdbcStubFactory == null) {
+            jdbcStubFactory = new JdbcStubFactory(new DatabaseStub("localhost", 9010), new File("./src/test/resources/db_stub_data").getAbsolutePath());
         }
-        if (mockDataSourceCatalogue == null) mockDataSourceCatalogue = jdbcMockFactoryCatalogue.createDataSource();
-        return jdbcMockFactoryCatalogue;
+        if (stubDataSource == null) stubDataSource = jdbcStubFactory.createDataSource();
+        return jdbcStubFactory;
     }
 
 
