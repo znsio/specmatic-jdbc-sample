@@ -19,24 +19,13 @@ public class TestDatabaseConfig extends DatabaseConfig {
     @Primary
     @Bean
     @DependsOn("primaryJdbcStubFactory")
-    public DataSource dataSource() {
-       return stubDataSource;
+    public DataSource dataSource(JdbcStubFactory jdbcStubFactory) {
+        return jdbcStubFactory.createDataSource();
     }
-    JdbcStubFactory jdbcStubFactory = null;
-    DataSource stubDataSource = null;
-
-
-
 
     @Bean(destroyMethod = "close")
     public JdbcStubFactory primaryJdbcStubFactory() {
-        if (jdbcStubFactory == null) {
-            jdbcStubFactory = new JdbcStubFactory(new DatabaseStub("localhost", 9010), new File("./src/test/resources/db_stub_data").getAbsolutePath());
-        }
-        if (stubDataSource == null) stubDataSource = jdbcStubFactory.createDataSource();
-        return jdbcStubFactory;
+        return new JdbcStubFactory(new DatabaseStub("localhost", 9010), new File("./src/test/resources/db_stub_data").getAbsolutePath());
     }
-
-
 
 }

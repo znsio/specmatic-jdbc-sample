@@ -1,0 +1,12 @@
+{
+  "query": "select product0_.id as id1_0_0_, product0_.cost as cost2_0_0_, product0_.name as name3_0_0_ from product product0_ where product0_.id=1",
+  "response": {
+    "rows": [
+      {
+        "id1_0_0_": 1,
+        "cost2_0_0_": 100,
+        "name3_0_0_": "Artificial Lamp"
+      }
+    ]
+  }
+}

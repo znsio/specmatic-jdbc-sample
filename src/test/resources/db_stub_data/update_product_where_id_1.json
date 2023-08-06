@@ -1,0 +1,6 @@
+{
+  "query": "update product set cost=300, name='Wooden Sofa' where id=1",
+  "response": {
+    "affectedRows": 1
+  }
+}

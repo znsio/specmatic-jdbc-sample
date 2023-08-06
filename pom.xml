@@ -67,7 +67,7 @@
 			<artifactId>specmatic-jdbc</artifactId>
 			<groupId>in.specmatic</groupId>
 			<scope>test</scope>
-			<version>0.62.0-db</version>
+			<version>0.63.0-db</version>
 			<exclusions>
 				<exclusion>
 					<groupId>in.specmatic</groupId>
