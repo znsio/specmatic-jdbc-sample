@@ -26,16 +26,11 @@ public class DatabaseConfig {
     private String driverClassName;
 
     @Bean
-    public DataSource dataSource() throws SQLException {
+    public DataSource dataSource() {
         DriverManagerDataSource dataSource = new DriverManagerDataSource();
         dataSource.setDriverClassName(driverClassName);
         dataSource.setUrl(url);
         dataSource.setUsername(username);
-
-        Connection connection = dataSource.getConnection();
-        Statement statement = connection.createStatement();
-        statement.execute("CREATE TABLE PRODUCT (id INTEGER, name VARCHAR(255), cost INTEGER)");
-
         return dataSource;
     }
 }

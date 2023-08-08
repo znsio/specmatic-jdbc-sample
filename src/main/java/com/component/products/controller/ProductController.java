@@ -1,5 +1,6 @@
 package com.component.products.controller;
 
+import com.component.products.entity.ProductDetails;
 import org.springframework.beans.factory.annotation.Autowired;
 
 import com.component.products.entity.Product;
@@ -16,14 +17,12 @@ public class ProductController {
 	private ProductService productService;
 
 	@PostMapping("/products")
-	public Product create(@RequestBody Product product) {
-		return productService.create(product);
+	public Product create(@RequestBody ProductDetails productDetails) {
+		return productService.create(productDetails);
 	}
 
-
-	
 	@PutMapping("/products/{id}")
-	public Product update(@PathVariable int id, @RequestBody Product productDetails) {
+	public Product update(@PathVariable int id, @RequestBody ProductDetails productDetails) {
 		return productService.update(id, productDetails);
 	}
 

@@ -20,14 +20,13 @@ paths:
         content:
           application/json:
             schema:
-              "$ref": "#/components/schemas/Product"
+              "$ref": "#/components/schemas/ProductDetails"
             examples:
               200_UPDATE:
                 value:
                   {
-                    "cost": 100,
                     "name": "Artificial Lamp",
-                    "id": 1
+                    "cost": 100
                   }
         required: true
       responses:
@@ -47,14 +46,13 @@ paths:
         content:
           application/json:
             schema:
-              "$ref": "#/components/schemas/Product"
+              "$ref": "#/components/schemas/ProductDetails"
             examples:
               200_ADD:
                 value:
                   {
-                    "cost": 300,
                     "name": "Wooden Sofa",
-                    "id": 1
+                    "cost": 300
                   }
         required: true
       responses:
@@ -72,14 +70,23 @@ components:
   schemas:
     Product:
       type: object
+      allOf:
+        - $ref: "#/components/schemas/ProductId"
+        - $ref: "#/components/schemas/ProductDetails"
+    ProductDetails:
+      type: object
       properties:
-        id:
-          type: integer
-          nullable: true
         name:
           type: string
           nullable: true
         cost:
           type: integer
           nullable: true
-
+    ProductId:
+      title: Product Id
+      type: object
+      properties:
+        id:
+          type: integer
+      required:
+        - id
