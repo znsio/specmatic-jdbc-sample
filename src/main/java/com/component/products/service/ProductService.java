@@ -18,11 +18,20 @@ public class ProductService {
     }
 
     public Product update(int id, ProductDetails productDetails) {
-        Optional<Product> productToBeUpdated = productRepository.findById(id);
-        if (!productToBeUpdated.isPresent()) {
-            throw new RuntimeException("Product not found with id: " + id);
-        }
-        return productRepository.save(productToBeUpdated.get().updateWith(productDetails));
+        return productRepository.save(findProduct(id).updateWith(productDetails));
     }
 
+    public Product delete(int id) {
+        Product product = findProduct(id);
+        productRepository.delete(product);
+        return product;
+    }
+
+    private Product findProduct(int id) {
+        Optional<Product> product = productRepository.findById(id);
+        if (!product.isPresent()) {
+            throw new RuntimeException("Product not found with id: " + id);
+        }
+        return product.get();
+    }
 }
