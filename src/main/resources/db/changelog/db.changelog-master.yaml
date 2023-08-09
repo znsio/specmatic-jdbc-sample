@@ -1,3 +1,5 @@
 databaseChangeLog:
   - include:
-      file: db/changelog/20230808_add_entity_Product.sql
+      file: db/changelog/1.0.0/add_table_product.sql
+  - include:
+      file: db/changelog/1.0.0/add_hibernate_sequence.sql

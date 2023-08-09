@@ -12,7 +12,7 @@ import java.io.File;
 @TestConfiguration
 @Primary
 @Profile("contract-tests")
-public class TestDatabaseConfig extends DatabaseConfig {
+public class TestDatabaseConfig {
 
     public static final int DATABASE_STUB_PORT = 9010;
     public static final String DATABASE_EXPECTATIONS_DIRECTORY = new File("./src/test/resources/db_stub_data").getAbsolutePath();
