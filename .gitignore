@@ -4,6 +4,10 @@ target/
 !**/src/main/**/target/
 !**/src/test/**/target/
 
+### Specmatic ###
+
+.specmatic
+
 ### STS ###
 .apt_generated
 .classpath
