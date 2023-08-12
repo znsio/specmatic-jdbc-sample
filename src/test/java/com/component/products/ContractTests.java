@@ -1,13 +1,11 @@
 package com.component.products;
 
-import com.component.products.config.TestDatabaseConfig;
 import in.specmatic.test.SpecmaticJUnitSupport;
 import org.junit.jupiter.api.BeforeAll;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.test.context.ContextConfiguration;
 
 @SpringBootTest(classes = ProductsApplication.class, webEnvironment = SpringBootTest.WebEnvironment.DEFINED_PORT)
-@ContextConfiguration(classes = {TestDatabaseConfig.class})
 public class ContractTests extends SpecmaticJUnitSupport {
 
     @BeforeAll

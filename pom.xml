@@ -49,7 +49,7 @@
             <version>0.65.1</version>
         </dependency>
         <dependency>
-            <artifactId>specmatic-jdbc</artifactId>
+            <artifactId>specmatic-jdbc-spring</artifactId>
             <groupId>in.specmatic</groupId>
             <scope>test</scope>
             <version>0.69.2-db</version>
