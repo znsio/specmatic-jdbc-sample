@@ -52,7 +52,7 @@
             <artifactId>specmatic-jdbc</artifactId>
             <groupId>in.specmatic</groupId>
             <scope>test</scope>
-            <version>0.69.1-db</version>
+            <version>0.69.2-db</version>
             <exclusions>
                 <exclusion>
                     <groupId>in.specmatic</groupId>
@@ -70,24 +70,6 @@
                     <artifactId>junit-vintage-engine</artifactId>
                 </exclusion>
             </exclusions>
-        </dependency>
-        <dependency>
-            <groupId>xerces</groupId>
-            <artifactId>xercesImpl</artifactId>
-            <version>2.12.0</version>
-            <scope>test</scope>
-        </dependency>
-        <dependency>
-            <groupId>p6spy</groupId>
-            <artifactId>p6spy</artifactId>
-            <version>3.9.1</version>
-            <scope>test</scope>
-        </dependency>
-        <dependency>
-            <groupId>com.mockrunner</groupId>
-            <artifactId>mockrunner-jdbc</artifactId>
-            <version>2.0.6</version>
-            <scope>test</scope>
         </dependency>
         <dependency>
             <groupId>org.springframework.boot</groupId>
