@@ -15,7 +15,7 @@ import java.io.File;
 public class TestDatabaseConfig {
 
     public static final int DATABASE_STUB_PORT = 9010;
-    public static final String DATABASE_EXPECTATIONS_DIRECTORY = new File("./src/test/resources/db_stub_data").getAbsolutePath();
+    public static final String DATABASE_EXPECTATIONS_DIRECTORY = new File("src/test/resources/specmatic/jdbc/stub/expectations").getAbsolutePath();
 
     @Primary
     @Bean
