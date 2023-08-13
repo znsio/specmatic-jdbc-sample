@@ -1,13 +1,6 @@
 {
   "query": "insert into product (cost, name, id) values (300, 'Wooden Sofa', 102)",
   "response": {
-    "rows": [
-      {
-        "id1_0_0_": 102,
-        "cost2_0_0_": 300,
-        "name3_0_0_": "Wooden Sofa"
-      }
-    ],
     "affectedRows": 1
   }
 }
