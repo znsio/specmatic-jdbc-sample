@@ -15,7 +15,7 @@
     <description>Product API that exposes CRUD functionality for products</description>
 
     <properties>
-        <java.version>1.8</java.version>
+        <java.version>17</java.version>
         <kotlin-coroutines.version>1.6.4</kotlin-coroutines.version>
         <kotlin.version>1.9.10</kotlin.version>
     </properties>
@@ -46,13 +46,13 @@
             <groupId>in.specmatic</groupId>
             <artifactId>junit5-support</artifactId>
             <scope>test</scope>
-            <version>0.80.1</version>
+            <version>1.2.2</version>
         </dependency>
         <dependency>
             <artifactId>specmatic-jdbc</artifactId>
             <groupId>in.specmatic</groupId>
             <scope>test</scope>
-            <version>0.81.0-db</version>
+            <version>0.10.0</version>
             <exclusions>
                 <exclusion>
                     <groupId>in.specmatic</groupId>
