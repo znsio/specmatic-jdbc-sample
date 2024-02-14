@@ -1,9 +1,9 @@
 {
-  "query": "call next value for hibernate_sequence",
+  "query": "select next value for hibernate_sequence",
   "response": {
     "rows": [
       {
-        "id1_0_0_": 102
+        "id": 102
       }
     ]
   }

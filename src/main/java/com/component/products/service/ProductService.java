@@ -29,7 +29,7 @@ public class ProductService {
 
     private Product findProduct(int id) {
         Optional<Product> product = productRepository.findById(id);
-        if (!product.isPresent()) {
+        if (product.isEmpty()) {
             throw new RuntimeException("Product not found with id: " + id);
         }
         return product.get();

@@ -1,10 +1,6 @@
 package com.component.products.entity;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
-
+import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
@@ -15,7 +11,8 @@ import lombok.NoArgsConstructor;
 @Entity
 public class Product {
     @Id
-    @GeneratedValue
+    @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "entity_seq_generator")
+    @SequenceGenerator(name = "entity_seq_generator", sequenceName = "hibernate_sequence", allocationSize = 1)
     private int id;
     private String name;
     private int cost;

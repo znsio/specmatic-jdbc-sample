@@ -1,5 +1,5 @@
 {
-  "query": "insert into product (cost, name, id) values (300, 'Wooden Sofa', 102)",
+  "query": "insert into product (cost,name,id) values (300,'Wooden Sofa',102)",
   "response": {
     "affectedRows": 1
   }
