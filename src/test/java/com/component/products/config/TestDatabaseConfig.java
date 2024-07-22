@@ -1,6 +1,6 @@
 package com.component.products.config;
 
-import in.specmatic.jdbc.stub.JdbcStubFactory;
+import io.specmatic.jdbc.stub.JdbcStubFactory;
 import org.springframework.boot.test.context.TestConfiguration;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Primary;
