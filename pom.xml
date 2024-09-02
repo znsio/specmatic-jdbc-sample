@@ -5,7 +5,7 @@
     <parent>
         <groupId>org.springframework.boot</groupId>
         <artifactId>spring-boot-starter-parent</artifactId>
-        <version>3.2.2</version>
+        <version>3.3.3</version>
         <relativePath/>
     </parent>
     <groupId>in.specmatic</groupId>
@@ -46,13 +46,13 @@
             <groupId>io.specmatic</groupId>
             <artifactId>junit5-support</artifactId>
             <scope>test</scope>
-            <version>2.0.15</version>
+            <version>2.0.17</version>
         </dependency>
         <dependency>
             <artifactId>specmatic-jdbc</artifactId>
             <groupId>io.specmatic</groupId>
             <scope>test</scope>
-            <version>0.11.2</version>
+            <version>0.11.3</version>
         </dependency>
         <dependency>
             <groupId>org.springframework.boot</groupId>
@@ -76,7 +76,7 @@
             <plugin>
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-maven-plugin</artifactId>
-                <version>3.2.2</version>
+                <version>3.3.3</version>
             </plugin>
         </plugins>
     </build>
