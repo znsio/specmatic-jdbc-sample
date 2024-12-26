@@ -5,7 +5,7 @@
     <parent>
         <groupId>org.springframework.boot</groupId>
         <artifactId>spring-boot-starter-parent</artifactId>
-        <version>3.2.2</version>
+        <version>3.3.3</version>
         <relativePath/>
     </parent>
     <groupId>in.specmatic</groupId>
@@ -61,11 +61,6 @@
             </exclusions>
         </dependency>
 
-<!--        <dependency>-->
-<!--            <groupId>io.swagger.core.v3</groupId>-->
-<!--            <artifactId>swagger-core</artifactId>-->
-<!--            <version>2.2.27</version>-->
-<!--        </dependency>-->
         <dependency>
             <groupId>io.swagger.parser.v3</groupId>
             <artifactId>swagger-parser</artifactId>
@@ -94,7 +89,7 @@
             <plugin>
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-maven-plugin</artifactId>
-                <version>3.2.2</version>
+                <version>3.3.3</version>
             </plugin>
         </plugins>
     </build>
