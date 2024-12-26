@@ -43,16 +43,16 @@
             <artifactId>liquibase-core</artifactId>
         </dependency>
         <dependency>
-            <groupId>in.specmatic</groupId>
+            <groupId>io.specmatic</groupId>
             <artifactId>junit5-support</artifactId>
             <scope>test</scope>
-            <version>1.2.19</version>
+            <version>2.0.49</version>
         </dependency>
         <dependency>
             <artifactId>specmatic-jdbc</artifactId>
-            <groupId>in.specmatic</groupId>
+            <groupId>io.specmatic</groupId>
             <scope>test</scope>
-            <version>0.11.0</version>
+            <version>0.11.3</version>
             <exclusions>
                 <exclusion>
                     <groupId>in.specmatic</groupId>
@@ -60,6 +60,18 @@
                 </exclusion>
             </exclusions>
         </dependency>
+
+<!--        <dependency>-->
+<!--            <groupId>io.swagger.core.v3</groupId>-->
+<!--            <artifactId>swagger-core</artifactId>-->
+<!--            <version>2.2.27</version>-->
+<!--        </dependency>-->
+        <dependency>
+            <groupId>io.swagger.parser.v3</groupId>
+            <artifactId>swagger-parser</artifactId>
+            <version>2.1.24</version>
+        </dependency>
+
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-test</artifactId>

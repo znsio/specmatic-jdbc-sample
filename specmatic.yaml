@@ -1,0 +1,5 @@
+contract_repositories:
+- type: git
+  repository: https://github.com/znsio/specmatic-order-contracts.git
+  test:
+    - io/specmatic/examples/store/openapi/api_products_v1.yaml
