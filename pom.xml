@@ -52,7 +52,7 @@
             <artifactId>specmatic-jdbc</artifactId>
             <groupId>io.specmatic</groupId>
             <scope>test</scope>
-            <version>0.11.3</version>
+            <version>0.12.0</version>
             <exclusions>
                 <exclusion>
                     <groupId>in.specmatic</groupId>
